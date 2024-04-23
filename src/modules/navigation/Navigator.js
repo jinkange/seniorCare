@@ -18,7 +18,10 @@ const iconSettings = require('../../../assets/images/drawer/settings.png');
 const iconBlog = require('../../../assets/images/drawer/blog.png')
 
 const drawerData = [
-
+  {
+    name: 'Home',
+    icon: iconHome,
+  },
   {
     name: 'Calendar',
     icon: iconCalendar,
@@ -27,10 +30,7 @@ const drawerData = [
     name: 'Grids',
     icon: iconGrids,
   },
-  {
-    name: 'Home',
-    icon: iconHome,
-  },
+
   {
     name: 'Pages',
     icon: iconPages,
