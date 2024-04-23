@@ -28,8 +28,25 @@ export default function HomeScreen({ isExtended, setIsExtended }) {
         style={styles.bgImage}
         resizeMode="cover"
       >
+        <View style={styles.body}>
+          <View style={styles.searchBox}>
+            <Text size={25} color="black">위치, 검색</Text>
+          </View>
+          <View style={styles.mainBox}>
+            <View style={styles.mainSubBox}><Text size={25} color="black">방문(요양,간호,목욕)</Text></View>
+            <View style={styles.mainSubBox}><Text size={25} color="black">주간호보, 단기보호</Text></View>
+            <View style={styles.mainSubBox}><Text size={25} color="black">요양원, 공동생활 가정</Text></View>
+            <View style={styles.mainSubBox}><Text size={25} color="black">복지용구</Text></View>
+          </View>
+          <View style={styles.secondBox}>
+            <View style={styles.secondSubBox}><Text size={8} color="black">등급 신청 갱신</Text></View>
+            <View style={styles.secondSubBox}><Text size={8} color="black">협력 업체</Text></View>
+            <View style={styles.secondSubBox}><Text size={8} color="black">수기표(본인부담)</Text></View>
+            <View style={styles.secondSubBox}><Text size={8} color="black">상담</Text></View>
+          </View>
+        </View>
         <View style={styles.section}>
-          <Text size={20} white>
+          <Text size={20} >
             Home
           </Text>
         </View>
@@ -81,6 +98,47 @@ const styles = StyleSheet.create({
   bgImage: {
     flex: 1,
     marginHorizontal: -20,
+  },
+  searchBox:{
+    height: 70,
+    backgroundColor:"white",
+    paddingHorizontal: 20,
+    marginHorizontal: 20,
+    alignItems: 'left',
+    borderColor:"black",
+    borderWidth: 10,
+    borderRadius: 10,
+    
+  },
+  mainBox:{
+    backgroundColor:"#1eff00",
+    padding: 20,
+    margin: 20,
+    flexWrap:'wrap',
+    flexDirection:'row', // 자식 컴포넌트들의 배치 방향 설정 (row가로, column세로)
+    justifyContent: "space-between" //자식 컴포넌트들의 간격(flex-start, flex-end, center, space-around, space-between, space-evenly)
+
+  },
+  secondBox:{
+    height: 200,
+    backgroundColor:"#002fff",
+    paddingHorizontal: 20,
+    flexDirection:'row', 
+    margin: 20,
+  },
+  mainSubBox:{
+    width:130,
+    height:130,
+    backgroundColor:"#00eeff",
+    paddingHorizontal: 20,
+    margin:10
+  },
+  secondSubBox:{
+    width:50,
+    height:50,
+    backgroundColor:"#00eeff",
+    paddingHorizontal: 20,
+    margin:10
   },
   section: {
     flex: 1,

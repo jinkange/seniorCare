@@ -44,7 +44,7 @@ const drawerData = [
 
 const Drawer = createDrawerNavigator();
 
-function CustomDrawerContent(props) {
+function AlarmDrawerContent(props) {
   return (
     <DrawerContentScrollView {...props} style={{padding: 0}}>
       <View style={styles.avatarContainer}>
@@ -111,18 +111,11 @@ export default function App() {
       drawerStyle={{
         backgroundColor: '#3C38B1',
       }}
-      drawerContent={props => <CustomDrawerContent {...props} />}
+      drawerContent={props => <AlarmDrawerContent {...props} />}
     >
-      <Drawer.Screen name="Homes" component={NavigatorView} />
+      
+      <Drawer.Screen name="Alarm" component={AlarmNavigatorView} /> 
     </Drawer.Navigator>
-        //     <AlarmDrawer.Navigator
-        //   drawerStyle={{
-        //     backgroundColor: '#3C38B1',
-        //   }}
-        //   drawerContent={props => <CustomDrawerContent {...props} />}
-        // >
-        //   <AlarmDrawer.Screen name="Alarm" component={AlarmNavigatorView} />
-        // </AlarmDrawer.Navigator>
   );
 }
 

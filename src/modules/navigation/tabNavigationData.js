@@ -13,29 +13,29 @@ const iconComponents = require('../../../assets/images/tabbar/components.png');
 const tabNavigationData = [
 
   {
-    name: 'Calendar',
+    name: '검색',
     component: CalendarScreen,
     icon: iconCalendar,
   },
   {
-    name: 'Grids',
+    name: '기록',
     component: GridsScreen,
     icon: iconGrids,
   },
   {
-    name: 'Home',
+    name: '홈',
     component: HomeScreen,
     icon: iconHome,
   },
   {
-    name: 'Pages',
-    component: PagesScreen,
-    icon: iconPages,
-  },
-  {
-    name: 'Components',
+    name: '찜',
     component: ComponentsScreen,
     icon: iconComponents,
+  },
+  {
+    name: '전체보기',
+    component: PagesScreen,
+    icon: iconPages,
   },
 ];
 

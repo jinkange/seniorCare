@@ -38,7 +38,7 @@ const headerBackground = require('../../../assets/images/topBarBg.png');
 
 const StackNavigationData = [
   {
-    name: 'React Native Starter',
+    name: '노인의 민족',
     component: TabNavigator,
     headerLeft: null,
     headerBackground: { source: headerBackground },
