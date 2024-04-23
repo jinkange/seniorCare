@@ -4,10 +4,13 @@ import {
   View,
   TouchableOpacity,
   ImageBackground,
+  Image,
 } from 'react-native';
 
 import { fonts, colors } from '../../styles';
 import { Text } from '../../components/StyledText';
+import { Button, RadioGroup, Dropdown } from '../../components';
+const iconSearch = require('../../../assets/images/tabbar/search.png');
 
 export default function HomeScreen({ isExtended, setIsExtended }) {
   // const rnsUrl = 'https://reactnativestarter.com';
@@ -30,19 +33,69 @@ export default function HomeScreen({ isExtended, setIsExtended }) {
       >
         <View style={styles.body}>
           <View style={styles.searchBox}>
+            <Image source={iconSearch}></Image>
             <Text size={25} color="black">위치, 검색</Text>
           </View>
           <View style={styles.mainBox}>
-            <View style={styles.mainSubBox}><Text size={25} color="black">방문(요양,간호,목욕)</Text></View>
-            <View style={styles.mainSubBox}><Text size={25} color="black">주간호보, 단기보호</Text></View>
-            <View style={styles.mainSubBox}><Text size={25} color="black">요양원, 공동생활 가정</Text></View>
-            <View style={styles.mainSubBox}><Text size={25} color="black">복지용구</Text></View>
+            <View style={styles.mainSubBox}>
+            <Button
+            style={[styles.demoButton, {flexBasis: '100%'}]}
+            primary
+            caption="방문(요양,간호,목욕)"
+            onPress={() => {}}/>
+          </View>
+            <View style={styles.mainSubBox}>
+              <Button
+              style={[styles.demoButton, {flexBasis: '100%'}]}
+              primary
+              caption="주간호보, 단기보호"
+              onPress={() => {}}/>
+            </View>
+            <View style={styles.mainSubBox}>
+              <Button
+              style={[styles.demoButton, {flexBasis: '100%'}]}
+              primary
+              caption="요양원, 공동생활 가정"
+              onPress={() => {}}/>
+            </View>
+            <View style={styles.mainSubBox}>
+              <Button
+              style={[styles.demoButton, {flexBasis: '100%'}]}
+              primary
+              caption="복지용구"
+              onPress={() => {}}/>
+            </View>
+            
           </View>
           <View style={styles.secondBox}>
-            <View style={styles.secondSubBox}><Text size={8} color="black">등급 신청 갱신</Text></View>
-            <View style={styles.secondSubBox}><Text size={8} color="black">협력 업체</Text></View>
-            <View style={styles.secondSubBox}><Text size={8} color="black">수기표(본인부담)</Text></View>
-            <View style={styles.secondSubBox}><Text size={8} color="black">상담</Text></View>
+            <View style={styles.secondSubBox}>
+              <Button
+                style={[styles.demoButton, {flexBasis: '100%'}]}
+                primary
+                caption="등급 신청 갱신"
+                onPress={() => {}}/>
+            </View>
+            <View style={styles.secondSubBox}>
+              <Button
+                style={[styles.demoButton, {flexBasis: '100%'}]}
+                primary
+                caption="협력 업체"
+                onPress={() => {}}/>
+            </View>
+            <View style={styles.secondSubBox}>
+              <Button
+                style={[styles.demoButton, {flexBasis: '100%'}]}
+                primary
+                caption="수기표(본인부담)"
+                onPress={() => {}}/>
+            </View>
+            <View style={styles.secondSubBox}>
+              <Button
+                style={[styles.demoButton, {flexBasis: '100%'}]}
+                primary
+                caption="상담"
+                onPress={() => {}}/>
+            </View>
           </View>
         </View>
         <View style={styles.section}>
@@ -106,40 +159,65 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     alignItems: 'left',
     borderColor:"black",
-    borderWidth: 10,
+    borderWidth: 3,
     borderRadius: 10,
-    
+    flexDirection:'row', // 자식 컴포넌트들의 배치 방향 설정 (row가로, column세로)
+    alignItems:"center"  // 자식 컴포넌트 정렬
   },
   mainBox:{
-    backgroundColor:"#1eff00",
+    backgroundColor:"#1eff0055",
     padding: 20,
-    margin: 20,
+    //marginVertical: 20,
+    borderColor:"black",
+    borderWidth: 3,
+    borderRadius: 10,
     flexWrap:'wrap',
     flexDirection:'row', // 자식 컴포넌트들의 배치 방향 설정 (row가로, column세로)
-    justifyContent: "space-between" //자식 컴포넌트들의 간격(flex-start, flex-end, center, space-around, space-between, space-evenly)
+    //justifyContent: "space-between" //자식 컴포넌트들의 간격(flex-start, flex-end, center, space-around, space-between, space-evenly)
 
   },
   secondBox:{
     height: 200,
-    backgroundColor:"#002fff",
-    paddingHorizontal: 20,
+    backgroundColor:"#002fff55",
+    borderColor:"black",
+    borderWidth: 3,
+    borderRadius: 10,
     flexDirection:'row', 
-    margin: 20,
+    //flexWrap:"wrap",
+    alignItems:"center",  // 자식 컴포넌트 정렬
+    justifyContent: "center" 
   },
   mainSubBox:{
-    width:130,
-    height:130,
-    backgroundColor:"#00eeff",
-    paddingHorizontal: 20,
+    width:150,
+    height:150,
+    borderColor:"black",
+    borderWidth: 3,
+    borderRadius: 10,
+    backgroundColor:"#00eeff55",
+    
     margin:10
   },
   secondSubBox:{
-    width:50,
-    height:50,
+    width:85,
+    height:160,
+    marginHorizontal: 3,
     backgroundColor:"#00eeff",
-    paddingHorizontal: 20,
-    margin:10
+    borderColor:"black",
+    borderWidth: 3,
+    borderRadius: 10,
+    
+    alignItems:"center"  // 자식 컴포넌트 정렬
   },
+  demoButton: {
+    marginTop: 0,
+    marginBottom: 0,
+    height:"100%",
+    width:"100%",
+    
+  },
+
+
+
   section: {
     flex: 1,
     paddingHorizontal: 20,

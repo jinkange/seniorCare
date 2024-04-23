@@ -4,23 +4,23 @@ import GridsScreen from '../grids/GridsViewContainer';
 import PagesScreen from '../pages/PagesViewContainer';
 import ComponentsScreen from '../components/ComponentsViewContainer';
 
-const iconHome = require('../../../assets/images/tabbar/home.png');
-const iconCalendar = require('../../../assets/images/tabbar/calendar.png');
-const iconGrids = require('../../../assets/images/tabbar/grids.png');
-const iconPages = require('../../../assets/images/tabbar/pages.png');
-const iconComponents = require('../../../assets/images/tabbar/components.png');
+const iconSearch = require('../../../assets/images/tabbar/search.png');
+const iconHistory = require('../../../assets/images/tabbar/history.png');
+const iconHome = require('../../../assets/images/drawer/home2.png');
+const iconFavorite = require('../../../assets/images/tabbar/favorite.png');
+const iconHeadline = require('../../../assets/images/tabbar/headline.png');
 
 const tabNavigationData = [
 
   {
     name: '검색',
     component: CalendarScreen,
-    icon: iconCalendar,
+    icon: iconSearch,
   },
   {
     name: '기록',
     component: GridsScreen,
-    icon: iconGrids,
+    icon: iconHistory,
   },
   {
     name: '홈',
@@ -30,12 +30,12 @@ const tabNavigationData = [
   {
     name: '찜',
     component: ComponentsScreen,
-    icon: iconComponents,
+    icon: iconFavorite,
   },
   {
     name: '전체보기',
     component: PagesScreen,
-    icon: iconPages,
+    icon: iconHeadline,
   },
 ];
 
