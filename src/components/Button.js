@@ -14,7 +14,7 @@ import { colors, fonts } from '../styles';
 const borderRadius = 40;
 
 export default function RNSButton(props) {
-  const caption = props.caption && props.caption.toUpperCase();
+  const caption = props.caption;
   let icon;
   if (props.icon) {
     icon = (
@@ -57,6 +57,13 @@ export default function RNSButton(props) {
       props.textColor && {
         color: props.textColor,
       },
+      props.fontSize && {
+        fontSize: props.fontSize,
+      },
+      props.fontFamily && {
+        fontFamily: props.fontFamily,
+      },
+      
     ];
 
     content = (
@@ -64,7 +71,7 @@ export default function RNSButton(props) {
         {icon && <View>{icon}</View>}
         {props.loading && <ActivityIndicator color="white" />}
         {!props.loading && props.caption && (
-          <Text style={textStyle}>{caption}</Text>
+          <Text style={textStyle} >{caption}</Text>
         )}
         {props.children && props.children}
       </View>

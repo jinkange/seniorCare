@@ -6,7 +6,6 @@ import {
   DrawerContentScrollView,
 } from '@react-navigation/drawer';
 import NavigatorView from './RootNavigation';
-import AlarmNavigatorView from './AlarmNavigation';
 
 import AvailableInFullVersion from '../../modules/availableInFullVersion/AvailableInFullVersionViewContainer';
 

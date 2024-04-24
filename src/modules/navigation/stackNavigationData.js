@@ -11,7 +11,7 @@ import AvailableInFullVersion from '../../modules/availableInFullVersion/Availab
 // import MessagesScreen from '../chat/MessagesViewContainer';
 // import ChartsScreen from '../charts/ChartsViewContainer';
 // import AuthScreen from '../auth/AuthViewContainer';
-
+import HomeCareScreen from '../homeCare/HomeCareViewContainer';
 import { colors, fonts } from '../../styles';
 
 const headerLeftComponent = (props) => {
@@ -38,9 +38,20 @@ const headerBackground = require('../../../assets/images/topBarBg.png');
 
 const StackNavigationData = [
   {
-    name: '노인의 민족',
+    name: '노인의 민족', //home
     component: TabNavigator,
     headerLeft: null,
+    headerBackground: { source: headerBackground },
+    headerTitleStyle: {
+      fontFamily: fonts.primaryRegular,
+      color: colors.white,
+      fontSize: 18,
+    },
+  },
+  {
+    name: '방문(요양, 간호, 목욕)',
+    component: HomeCareScreen,
+    headerLeft: headerLeftComponent,
     headerBackground: { source: headerBackground },
     headerTitleStyle: {
       fontFamily: fonts.primaryRegular,
@@ -136,6 +147,7 @@ const StackNavigationData = [
       fontSize: 18,
     },
   },
+
 ]
 
 export default StackNavigationData;

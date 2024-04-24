@@ -12,7 +12,7 @@ import { Text } from '../../components/StyledText';
 import { Button, RadioGroup, Dropdown } from '../../components';
 const iconSearch = require('../../../assets/images/tabbar/search.png');
 
-export default function HomeScreen({ isExtended, setIsExtended }) {
+export default function HomeScreen({ isExtended, setIsExtended, navigation}) {
   // const rnsUrl = 'https://reactnativestarter.com';
   // const handleClick = () => {
   //   Linking.canOpenURL(rnsUrl).then(supported => {
@@ -40,28 +40,32 @@ export default function HomeScreen({ isExtended, setIsExtended }) {
             <View style={styles.mainSubBox}>
             <Button
             style={[styles.demoButton, {flexBasis: '100%'}]}
-            primary
+            bordered
+            fontSize ={24}
             caption="방문(요양,간호,목욕)"
-            onPress={() => {}}/>
+            onPress={() => navigation.navigate('방문(요양, 간호, 목욕)')}/>
           </View>
             <View style={styles.mainSubBox}>
               <Button
               style={[styles.demoButton, {flexBasis: '100%'}]}
-              primary
+              bordered
+              fontSize ={24}
               caption="주간호보, 단기보호"
               onPress={() => {}}/>
             </View>
             <View style={styles.mainSubBox}>
               <Button
               style={[styles.demoButton, {flexBasis: '100%'}]}
-              primary
+              bordered
+              fontSize ={24}
               caption="요양원, 공동생활 가정"
               onPress={() => {}}/>
             </View>
             <View style={styles.mainSubBox}>
               <Button
               style={[styles.demoButton, {flexBasis: '100%'}]}
-              primary
+              bordered
+              fontSize ={24}
               caption="복지용구"
               onPress={() => {}}/>
             </View>
@@ -71,28 +75,32 @@ export default function HomeScreen({ isExtended, setIsExtended }) {
             <View style={styles.secondSubBox}>
               <Button
                 style={[styles.demoButton, {flexBasis: '100%'}]}
-                primary
+                bordered
+                fontSize ={15}
                 caption="등급 신청 갱신"
                 onPress={() => {}}/>
             </View>
             <View style={styles.secondSubBox}>
               <Button
                 style={[styles.demoButton, {flexBasis: '100%'}]}
-                primary
+                bordered
+                fontSize ={15}
                 caption="협력 업체"
                 onPress={() => {}}/>
             </View>
             <View style={styles.secondSubBox}>
               <Button
                 style={[styles.demoButton, {flexBasis: '100%'}]}
-                primary
-                caption="수기표(본인부담)"
+                bordered
+                fontSize ={15}
+                caption="수가표(본인부담)"
                 onPress={() => {}}/>
             </View>
             <View style={styles.secondSubBox}>
               <Button
                 style={[styles.demoButton, {flexBasis: '100%'}]}
-                primary
+                bordered
+                fontSize ={15}
                 caption="상담"
                 onPress={() => {}}/>
             </View>
@@ -159,28 +167,31 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     alignItems: 'left',
     borderColor:"black",
-    borderWidth: 3,
+    borderWidth: 1,
     borderRadius: 10,
     flexDirection:'row', // 자식 컴포넌트들의 배치 방향 설정 (row가로, column세로)
     alignItems:"center"  // 자식 컴포넌트 정렬
   },
   mainBox:{
-    backgroundColor:"#1eff0055",
-    padding: 20,
+    
+    padding: 10,
     //marginVertical: 20,
-    borderColor:"black",
-    borderWidth: 3,
+    
+    borderWidth: 1,
     borderRadius: 10,
     flexWrap:'wrap',
     flexDirection:'row', // 자식 컴포넌트들의 배치 방향 설정 (row가로, column세로)
     //justifyContent: "space-between" //자식 컴포넌트들의 간격(flex-start, flex-end, center, space-around, space-between, space-evenly)
 
+    alignItems:"center",  // 자식 컴포넌트 정렬
+    justifyContent: "center" 
+
   },
   secondBox:{
     height: 200,
-    backgroundColor:"#002fff55",
-    borderColor:"black",
-    borderWidth: 3,
+    
+    
+    borderWidth: 0,
     borderRadius: 10,
     flexDirection:'row', 
     //flexWrap:"wrap",
@@ -188,34 +199,41 @@ const styles = StyleSheet.create({
     justifyContent: "center" 
   },
   mainSubBox:{
-    width:150,
-    height:150,
-    borderColor:"black",
-    borderWidth: 3,
-    borderRadius: 10,
-    backgroundColor:"#00eeff55",
+    width:160,
+    height:160,
     
-    margin:10
+    borderWidth: 0,
+    borderRadius: 10,
+    
+    margin:10,
+
   },
   secondSubBox:{
     width:85,
     height:160,
     marginHorizontal: 3,
-    backgroundColor:"#00eeff",
-    borderColor:"black",
-    borderWidth: 3,
+    
+    
+    borderWidth: 0,
     borderRadius: 10,
     
-    alignItems:"center"  // 자식 컴포넌트 정렬
+    alignItems:"center",  // 자식 컴포넌트 정렬
+
+
   },
   demoButton: {
     marginTop: 0,
     marginBottom: 0,
     height:"100%",
     width:"100%",
-    
+    fontFamily: fonts.primaryRegular,
+    fontSize: 25,
   },
-
+  subtitle: {
+    fontFamily: fonts.primaryRegular,
+    fontSize: 12,
+    color: '#a4a4a4',
+  },
 
 
   section: {

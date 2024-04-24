@@ -40,7 +40,9 @@ export default function NavigatorView(props) {
           key={`stack_item-${idx+1}`}
           name={item.name} 
           component={item.component} 
+          props = {props}
           options={{
+            animationEnabled:false,
             headerLeft: item.headerLeft || headerLeftComponentMenu,
             headerBackground: () => (
               <Image style={styles.headerImage} source={item.headerBackground.source} />

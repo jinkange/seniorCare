@@ -5,14 +5,15 @@ import GridView from './GridsView';
 const listData = [
   {
     id: 1,
-    brand: 'Citizen',
-    title: 'CITIZEN ECO-DRIVE',
-    subtitle: 'Limited Edition',
-    price: '$129.99',
-    badge: 'NEW',
+    brand: 'A센터',
+    title: '방문요양, 주간보호, 요양원',
+    subtitle: 'A등급',
+    price: '현원/정원(30명/60명)',
+    priceFrom: true,
+    badge: '6년~',
     badgeColor: '#3cd39f',
     image:
-      'https://reactnativestarter.com/demo/images/city-sunny-people-street.jpg',
+      '/assets/images/center/center1.jpg',
   },
   {
     id: 2,
@@ -21,7 +22,8 @@ const listData = [
     subtitle: 'Office, prom or special parties is all dressed up',
     price: '$29.99',
     priceFrom: true,
-    image: 'https://reactnativestarter.com/demo/images/pexels-photo-26549.jpg',
+    image: 
+    '/assets/images/center/center2.jpg',
   },
   {
     id: 3,
@@ -32,7 +34,8 @@ const listData = [
     priceFrom: true,
     badge: 'SALE',
     badgeColor: '#ee1f78',
-    image: 'https://reactnativestarter.com/demo/images/pexels-photo-30360.jpg',
+    image: 
+    '/assets/images/center/center3.jpg',
   },
   {
     id: 4,
@@ -42,7 +45,7 @@ const listData = [
     price: '$129.99',
     badge: 'NEW',
     badgeColor: 'green',
-    image: 'https://reactnativestarter.com/demo/images/pexels-photo-37839.jpg',
+    image: '/assets/images/center/center4.jpg',
   },
   {
     id: 5,
@@ -51,7 +54,7 @@ const listData = [
     subtitle: 'Office, prom or special parties is all dressed up',
     price: '$29.99',
     priceFrom: true,
-    image: 'https://reactnativestarter.com/demo/images/pexels-photo-69212.jpg',
+    image:'/assets/images/center/center5.jpg',
   },
   {
     id: 6,
@@ -62,7 +65,7 @@ const listData = [
     priceFrom: true,
     badge: 'SALE',
     badgeColor: 'red',
-    image: 'https://reactnativestarter.com/demo/images/pexels-photo-108061.jpg',
+    image:'/assets/images/center/center6.jpg',
   },
   {
     id: 7,
@@ -72,7 +75,7 @@ const listData = [
     price: '$129.99',
     badge: 'NEW',
     badgeColor: '#3cd39f',
-    image: 'https://reactnativestarter.com/demo/images/pexels-photo-126371.jpg',
+    image:'/assets/images/center/center7.jpg',
   },
   {
     id: 8,
@@ -81,7 +84,7 @@ const listData = [
     subtitle: 'Office, prom or special parties is all dressed up',
     price: '$29.99',
     priceFrom: true,
-    image: 'https://reactnativestarter.com/demo/images/pexels-photo-165888.jpg',
+    image:'/assets/images/center/center8.jpg',
   },
   {
     id: 9,
